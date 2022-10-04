@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+         .first  {
+            background-color: pink;
+            color: white;
+            padding: 10px;
+        }
+
+        .first li {
+            padding: 10px;
+            background-color: rgb(187, 93, 117);
+            list-style-position: inside;
+            margin: 10px;
+        }
+        .first span {
+            background-color: darkred;
+            padding: 10px;
+        }
+
+         ul li {
+            list-style-position: inside;
+            list-style-image: url(./unchecked_16.png);
+            background-color: lightblue;
+            padding: 15px;
+        }
+
+        ul li::after {
+            content: url(./arrow_16.png);
+        }
+
+        .checked {
+            list-style-image: url(./checked_16.png);
+            background-color: lightgray;
+        }
+
+        .else {
+            background-color: rgb(130, 182, 199);
+        }
+        dt {
+            font-style: italic;
+        }
+        .gray {
+            color: gray;
+        }
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <ol class="first">
+        <li><span>Apple</span>   </li> 
+        <li><span>Orange</span> </li>
+        <li> <span>Pineapple</span> </li>
+        <li> <span>Peal</span> </li>
+        <li><span>Cherry</span> </li>
+    </ol>
+    <br>
+    <hr>
+
+    <h2>My To Do List</h2>
+    <ul>
+        <li class="else">Hit the gym</li>
+        <li class="checked"><del>Pay bills</del></li>
+        <li class="else">Meet John</li>
+        <li>Buy eggs</li>
+        <li class="checked"><del>Read a book</del></li>
+        <li>Organize office</li>
+        <li class="else">Eat dinner</li>
+        <li>Buy apples</li>
+        <li class="else">Meet George</li>
+        <li>Feed the cat</li>
+        <li class="checked"><del>Write a letter</del></li>
+        <li>Run 1 km</li>
+    </ul>
+    <br>
+    <hr>
+
+    <h2>TAG</h2>
+    <p>[tæg]</p>
+    <dl>
+        <dt>noun</dt>
+        <dd>
+            <ol>
+                <li>a label attached to someone or something for the purpose of identification or to give other information. <br>
+                    <span class="gray">"he gave his pet a collar with a metal name tag"</span> <br>
+                    synonyms: label, ticket, badge, mark, marker, tab, tally, sticker, docket, stub, chit, chitt, counterfoi, flag, stamp <br>
+                    <span class="gray">"a price tag"</span></li>
+                <li>a small piece or part that is attached to a main body.</li>
+            </ol>
+        </dd>
+            <dt>verb</dt>
+            <dd>
+                <ol>
+                    <li>attach a label to.<br>
+                        <span class="gray">"mothers suspected that their babies had been wrongly tagged during an alarm at the hospital"</span><br>
+                        synonyms: <span class="blue">label, attach tags to, put a label on, mark, ticket, earmark, identify, docket, flag, indicate</span><br>
+                        <span class="gray">"the bottles were tagged with colour-coded labels"</span></li>
+                    <li>add to something, especially as an afterthought or with no real connection.<br>
+                        <span class="gray">"she meant to <strong>tag</strong>  her question <strong>on</strong> at the end of her remarks"</span><br>
+                        synonyms: <span class="blue">add, tack, join, attach, append, affix, annex </span><br>
+                        <span class="gray">"their heads were so large that the rest of their bodies seemed <strong>tagged on</strong> as an afterthought"</span></li>
+                </ol>
+            </dd>
+    </dl>
+</body>
+
+</html>
