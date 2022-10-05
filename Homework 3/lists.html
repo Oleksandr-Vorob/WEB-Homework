@@ -27,6 +27,7 @@
             padding: 10px;
         }
 
+
          ul li {
             list-style-position: inside;
             list-style-image: url(./unchecked_16.png);
@@ -35,7 +36,11 @@
         }
 
         ul li::after {
-            content: url(./arrow_16.png);
+            content: 'x';
+            padding: 5px;
+            color: red;
+            font-weight: bolder;
+
         }
 
         .checked {
@@ -46,6 +51,8 @@
         .else {
             background-color: rgb(130, 182, 199);
         }
+
+
         dt {
             font-style: italic;
         }
