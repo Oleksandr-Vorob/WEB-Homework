@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table (pseudo classes)</title>
+    <style>
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 90%;
+            margin: auto;
+            border-radius: 10px;
+            border-collapse: collapse;
+            background-color: rgb(206, 206, 207);
+            overflow: hidden;
+           
+        }
+        
+        td {
+            padding: 15px;
+            text-align: center;
+        }
+        tr:first-child {
+            color: white;
+        }
+        td:first-child {
+            text-align: left;
+        }
+        .start span{
+           border: 1px gray double;
+           padding: 5px;
+           background-color: rgb(189, 187, 187);
+           color: rgb(100, 100, 100);
+        }
+        tr:nth-child(2n) {
+            background-color: rgb(184, 182, 180);
+        }
+        .first td {
+            font-weight: bold;
+        }
+        .first span {
+            font-size: 50px;
+        }
+        tr:nth-child(2n) td:nth-child(2n) {
+            background-color: rgb(196, 195, 194);
+        }
+        tr:nth-child(odd) td:nth-child(even) {
+            background-color: rgb(230, 230, 233);
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr class="first">
+            <td style="background-color: rgb(135, 202, 224);">Choose your plane</td>
+            <td style="background-color: rgb(134, 190, 209);">starter<br><br><span>$10</span><br>per month</td>
+            <td style="background-color: rgb(73, 141, 163);">econom <br><br><span>$30</span><br>per month</td>
+            <td style="background-color: rgb(43, 106, 128);">standard<br><br><span>$59</span><br>per month</td>
+            <td style="background-color: rgb(22, 74, 92);">professional<br><br><span>$99</span><br>per month</td>
+        </tr>
+        <tr>
+            <td>Amount of space</td>
+            <td>20GB</td>
+            <td>40GB</td>
+            <td>110GB</td>
+            <td>Unlimited</td>
+        </tr>
+        <tr>
+            <td>Bandwidth per month</td>
+            <td>120GB</td>
+            <td>240GB</td>
+            <td>610GB</td>
+            <td>1300GB</td>
+        </tr>
+        <tr>
+            <td>Email account</td>
+            <td>1</td>
+            <td>15</td>
+            <td>60</td>
+            <td>Unlimited</td>
+        </tr>
+        <tr>
+            <td>MySQL databases</td>
+            <td>1</td>
+            <td>15</td>
+            <td>60</td>
+            <td>Unlimited</td>
+        </tr>
+        <tr>
+            <td>25th support</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Support tickets per month</td>
+            <td>2</td>
+            <td>6</td>
+            <td>14</td>
+            <td>20</td>
+        </tr>
+        <tr class="start">
+            <td></td>
+            <td><span>START</span></td>
+            <td><span>START</span></td>
+            <td><span>START</span></td>
+            <td><span>START</span></td>
+        </tr>
+ 
+    </table>
+</body>
+</html>
