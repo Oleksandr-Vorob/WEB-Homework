@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        div {
+            height: 300px;
+            width: 300px;
+            border: rgb(45, 123, 143) solid;
+            border-radius: 50%;
+            color: rgb(45, 123, 143);
+            text-align: center;
+
+        }
+        p {
+            position: relative;
+            bottom: 175px;
+            transform-origin: bottom;
+            animation: start 60s linear 0s infinite;
+            font-size: 150px;
+        }
+        span p{
+            position: relative;
+            bottom: 470px;
+            transform-origin: bottom;
+            animation: start 3600s linear 0s infinite;
+            font-size: 125px;
+        }
+        em {
+            position: relative;
+            bottom: 336px;
+            left: 136px;
+            font-size: 200px;
+            color: rgb(45, 123, 143);
+        }
+        @keyframes start {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div> <p>|</p><span><p>|</p></span> </div><em>.</em>
+</body>
+</html>
