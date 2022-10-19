@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    
+    color: white;
+    font-weight: bold;
+    margin: 5%;
+    background-color: rgb(5, 5, 36);
+}
+.container {
+            display: grid;
+            grid-template-columns: 20% 58% 20%;
+            grid-template-rows: 10% 78% 10%; 
+            gap: 2%;
+            height: 100vw;
+            box-sizing: border-box;
+        }
+        .item-1 {
+            display: flex;
+            justify-content: space-between;
+            padding: 3vw;
+            grid-column: span 3;
+            background-color: red;
+            border-radius: 1vw;
+        }
+        .item-2 {
+            background-color: rgb(184, 184, 14);
+            padding: 5vw;
+            padding-top: 30vw;
+            padding-bottom: 30vw;
+            border-radius:1vw;
+
+        }
+        .item-3 {
+            background-color: rgb(54, 54, 241);
+            padding: 5vw;
+            padding-top: 30vw;
+            padding-bottom: 30vw;
+            border-radius: 1vw;
+        }
+        .item-4 {
+            background-color: rgb(20, 121, 95);
+            padding: 5vw;
+            padding-top: 30vw;
+            padding-bottom: 30vw;
+            border-radius: 1vw;
+        }
+        .item-5 {
+            padding: 3vw;
+            border-radius: 1vw;
+            background-color: rgb(107, 34, 107);
+            grid-column: span 3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item-1"><div>HOME SEARCH</div> <div>LOGOUT</div></div>
+        <div class="item-2">MENU</div>
+        <div class="item-3">CONTENT</div>
+        <div class="item-4">RIGHT</div>
+        <div class="item-5">FOOTER</div>
+    </div>
+</body>
+</html>

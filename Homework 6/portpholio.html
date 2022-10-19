@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini portpholio</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(61, 61, 61);
+            margin: 50px;
+            color: white;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        h2 {
+            display: flex;
+            justify-content: center;
+            font-weight: normal;
+        }
+
+        .about {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        img {
+            display: flex;
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+
+        .body img {
+            border: 5px white solid;
+            -moz-box-shadow: 0 0 10px white;
+            -webkit-box-shadow: 0 0 10px white;
+            box-shadow: 0 0 10px white;
+        }
+
+        .works {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .works img {
+            flex-basis: 33%;
+            height: 18vw;
+        }
+
+        .works2 img {
+            flex-basis: 50%;
+            height: 29vw;
+        }
+
+        .works3 img {
+            flex-basis: 100%;
+            height: 51vw;
+        }
+
+        .inst {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: row;
+            height: 13vw;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        footer {
+            font-size: smaller;
+            margin-top: 30px;
+        }
+
+        ul li {
+            list-style-type: none;
+            padding: 10px;
+        }
+
+        .ul2 li::before {
+            content: '- ';
+        }
+            .works div div {
+            background-color: rgb(202, 200, 200, 0.7);
+            color: black;
+            padding: 1vw;
+            position: absolute;
+            width: 20vw;
+          display: none;
+        }
+        .s1:hover ~ .s1{
+display: initial;
+        }
+        .s2:hover ~ .s2{
+display: initial;
+        }
+        .s3:hover ~ .s3{
+display: initial;
+        }
+        .s4:hover ~ .s4{
+display: initial;
+        }
+        .s5:hover ~ .s5{
+display: initial;
+        }
+        .s6:hover ~ .s6{
+display: initial;
+        }
+        .inst div {
+            height: 13vw;
+            background-color: rgb(179, 178, 178,0.8);
+            position: absolute;
+            display: none;
+        }
+        .inst div img {
+            width: 2vw;
+            position: relative;
+            left: 4vw;
+            top: 6vw;
+        }
+        .i1:hover ~ .i1{
+display: initial;
+        }
+        .i2:hover ~ .i2{
+display: initial;
+        }
+        .i3:hover ~ .i3{
+display: initial;
+        }
+        .i4:hover ~ .i4{
+display: initial;
+        }
+        .i5:hover ~ .i5{
+display: initial;
+        }
+        .i6:hover ~ .i6{
+display: initial;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div style="display: flex; flex-direction: row; gap: 10px;"><img style="width: 45px;"
+                src="https://cdn-icons-png.flaticon.com/512/44/44413.png" alt="Camera">
+            <p>Julia Jacobson <br> The photographer</p>
+        </div>
+        <div style="display: flex; gap: 20px;">
+            <a href="#about-me">About</a>
+            <a href="#works">Works</a>
+            <a href="#instagramm">Instagramm</a>
+        </div>
+    </header>
+    <span class="body">
+        <h2 id="about-me">About me</h2>
+        <span class="about"><img style="width: 30vw;height: 18vw; "
+                src="https://static-cse.canva.com/blob/191106/00_verzosa_winterlandscapes_jakob-owens-tb-2640x1485.jpg"
+                alt="Photographer">
+            <ul>
+                <ol><strong>My name is Julia Jacobson.</strong></ol>
+                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                <li>Consectetur, quia? Veniam velit labore iusto est reprehenderit laborum cumque?</li>
+                <li>Explicabo totam ut qui soluta, iste dolore consequuntur quia asperiores!</li>
+                <li>Accusantium ex dolor officia vero cupiditate.</li>
+            </ul>
+            <ul class="ul2">
+                <li>200+ happy clients</li>
+                <li>120 portret shoots</li>
+                <li>600+ nature shoots</li>
+                <li>1000+ wedding shoots</li>
+                <li>12 countries visited</li>
+                <li>600+ cefee drinked</li>
+            </ul>
+        </span>
+        <h2 id="works">My Last Works</h2>
+        <div class="works">
+            <div><img class="s1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPFXvr2_j5Ghb3qnuNziNx2MkP1L3aj5K8dQ&usqp=CAU" alt="landscape">
+                <div class="s1" style="top: 40vw; left: 5vw;">
+                    <h4>Landscape</h4> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, hic.
+                </div>
+            </div>
+            <div><img class="s2" src="https://mixnews.lv/wp-content/uploads/2020/09/18/2020-09-18-mixnews-1594109847_krasota-prirody-na-fotografiyax-19.jpg" alt="landscape">
+                    <div class="s2"  style="top: 40vw; left: 41vw;">
+                        <h4>Landscape</h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, hic.
+                    </div>
+                </div>
+            <div><img class="s3" src="https://celes.club/uploads/posts/2021-12/1640959575_1-celes-club-p-leto-avgust-priroda-krasivo-foto-2.jpg" alt="landscape">
+                    <div class="s3" style="top: 40vw; left: 71vw;">
+                        <h4>Landscape</h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, hic.
+                    </div>
+                </div>
+            <div class="works2"> <img class="s4" src="https://vsviti.com.ua/wp-content/uploads/2012/07/tn1.jpg" alt="Japan">
+                <div class="s4" style="top: 65vw; left: 10vw;">
+                    <h4>Landscape</h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, hic.
+                </div>
+            </div>
+            <div class="works2"> <img class="s5" src="https://bipbap.ru/wp-content/uploads/2017/06/1-13.jpg" alt="Sky">
+                <div class="s5" style="top: 65vw; left: 55vw;">
+                    <h4>Landscape</h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, hic.
+                </div>
+            </div>
+            <div class="works3"> <img class="s6" src="https://perito-burrito.com/uploads/post/image/eeda1fe6449a435f47bab9d6ba96085e3d3021457b2c5f4486a6bc988edcdbd4/main_mattews-di-nelson-OIHa8B4Pc00-unsplash.jpg" alt="Paris">
+                    <div class="s6" style="top: 95vw; left: 35vw; width: 30vw;"> 
+                        <h4>Landscape</h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, hic.
+                    </div>
+                </div>
+        </div>
+
+        <h2 id="instagramm">Follow me on Instagramm</h2>
+        <span class="inst">
+            <img class="i1" src="https://i.pinimg.com/736x/7a/48/f9/7a48f965648276e6bbdd661261ccc7c7.jpg" alt="Insta">
+            <div class="i1" style="width: 11vw;"><img src="http://hi-news.pp.ua/uploads/posts/2017-11/scho-take-ico-prostimi-slovami_6.jpeg" alt="lupa"> </div>
+            <img class="i2" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1013F/production/_122255856_6c2ea52c-9914-4444-9ec2-a8cd4e50ac60.jpg" alt="Insta"> 
+            <div class="i2" style="left: 15vw; width: 19vw;"><img style="left: 9vw;" src="http://hi-news.pp.ua/uploads/posts/2017-11/scho-take-ico-prostimi-slovami_6.jpeg" alt="lupa"> </div>
+            <img class="i3" src="https://www.tviysvit.com.ua/wp-content/gallery/d184d0bed182d0bed0b3d180d0b0d184-ashraful-arefin/Screenshot_5.jpg" alt="Insta">
+            <div class="i3" style="left: 35vw; width: 11vw;"><img src="http://hi-news.pp.ua/uploads/posts/2017-11/scho-take-ico-prostimi-slovami_6.jpeg" alt="lupa"> </div>
+            <img class="i4" src="http://images-on-off.com/images/30/krasiviefotoprolyubovromanticheskiefotog-60974688.jpg" alt="Insta"> 
+            <div class="i4" style="left: 47vw; width: 23vw;"><img style="left: 9vw;" src="http://hi-news.pp.ua/uploads/posts/2017-11/scho-take-ico-prostimi-slovami_6.jpeg" alt="lupa"> </div>
+            <img class="i5" src="https://www.tviysvit.com.ua/wp-content/gallery/d184d0bed182d0bed0b3d180d0b0d184-ashraful-arefin/Screenshot_6.jpg" alt="Insta">
+            <div class="i5" style="left: 71vw; width: 13vw;"><img src="http://hi-news.pp.ua/uploads/posts/2017-11/scho-take-ico-prostimi-slovami_6.jpeg" alt="lupa"> </div>
+            <img class="i6" src="https://i.pinimg.com/236x/37/b3/87/37b3874c151877fa8bdbd839e4760a14.jpg" alt="Insta"> 
+            <div class="i6" style="left: 85vw; width: 11vw;"><img src="http://hi-news.pp.ua/uploads/posts/2017-11/scho-take-ico-prostimi-slovami_6.jpeg" alt="lupa"> </div>
+        </span>
+    </span>
+    <footer>
+        Ⓒ Copyfight 2018-2020 Julia Jacobson.
+    </footer>
+</body>
+
+</html>
