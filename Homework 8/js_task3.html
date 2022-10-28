@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1
+        let start = Number(prompt("Enter start of range:"));
+        let end = Number(prompt("Enter end of range:"));
+        let summ = 0;
+        while (start != end + 1)
+        {
+            summ += start;
+            start++;
+        }
+        alert(summ);
+
+        //2
+        let x = prompt("Enter a number:");
+        let y = 0;
+        for (let i = 0; i < x.length; i++)
+        {
+            y++
+        }
+        alert("Number of digits: " + y);
+
+        //3
+        let num, zero = 0, p = 0, n = 0;
+        for (k = 0; k < 10; k++)
+        {
+            num = prompt("Enter number:");
+            if (num > 0) p++;
+            if (num < 0) n++;
+            if (num == 0) zero++;           
+        }
+        alert("Positive: " + p + " Negative: " + n + " Zero: " + zero);
+
+        //4
+        let quest, d = 0;
+        let arr = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        do {
+            if (d == 7) d = 0;
+            quest = confirm(arr[d] + ". Do you want to see the next day?");
+            d++
+        } while (quest == true)
+    </script>
+</body>
+</html>
