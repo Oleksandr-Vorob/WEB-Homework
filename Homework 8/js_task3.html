@@ -29,15 +29,17 @@
         alert("Number of digits: " + y);
 
         //3
-        let num, zero = 0, p = 0, n = 0;
+        let num, zero = 0, p = 0, n = 0, pa = 0, o = 0;
         for (k = 0; k < 10; k++)
         {
             num = prompt("Enter number:");
             if (num > 0) p++;
             if (num < 0) n++;
-            if (num == 0) zero++;           
+            if (num == 0) zero++;  
+            if (num % 2 == 0) pa++;
+            if (num % 2 != 0) o++;         
         }
-        alert("Positive: " + p + " Negative: " + n + " Zero: " + zero);
+        alert("Positive: " + p + " Negative: " + n + " Zero: " + zero + " Pair: " + pa + " Odd: " + o);
 
         //4
         let quest, d = 0;
