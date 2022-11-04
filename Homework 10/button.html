@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Button {
+            height;
+            width;
+            text;
+            constructor(height, width, text){
+                this.height = height;
+                this.width = width;
+                this.text = text;
+            };
+
+             showBtn()  {
+                document.write(`<button>${this.text}</button>`);
+            };
+           }
+
+        let button = new Button(50, 300, "Button");
+        button.showBtn();
+
+
+        class BootstrapButton extends Button {
+            color;
+            constructor(height, width, text, color){
+                super (height, width, text);
+                this.color = color;
+            }
+            showBtn() {
+                document.write(`<button style="color: ${this.color}; height: ${this.height}px; width: ${this.width}px" >${this.text}</button>`);
+            }
+        }
+
+        let boostrapbutton = new BootstrapButton(50, 300, "Button", "red");
+        boostrapbutton.showBtn();
+    </script>
+
+</body>
+</html>

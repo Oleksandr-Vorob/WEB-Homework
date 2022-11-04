@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1
+        let date = new Date();
+        let time = {
+            hours: date.getHours(),
+            minutes: date.getMinutes(),
+            seconds: date.getSeconds()
+        };
+        function showtime (time) {
+            console.log("Поточний час: " + time.hours + ":" + time.minutes + ":" + time.seconds); 
+        }
+       showtime(time);
+
+        //2
+        function time_plus_1s (time) {
+            time.seconds += 1;
+            if (time.seconds == 60) {
+                time.seconds = 0;
+                time.minutes += 1;
+            }
+            if (time.minutes == 60) {
+                time.minutes = 0;
+                time.hours += 1;
+            }
+            if (time.hours == 24) time.hours = 0;
+            console.log("Поточний час + 1c: " + time.hours + ":" + time.minutes + ":" + time.seconds);
+            time.seconds = date.getSeconds();
+            time.minutes = date.getMinutes();
+            time.hours = date.getHours();
+        }
+        time_plus_1s (time)
+
+        //3
+        function time_minus_1s (time) {
+            time.seconds -= 1;
+            if (time.seconds == -1) {
+                time.seconds = 59;
+                time.minutes -= 1;
+            }
+            if (time.minutes == -1) {
+                time.minutes = 59;
+                time.hours -= 1;
+            }
+            if (time.hours == -1) time.hours = 23;
+            console.log("Поточний час - 1c: " + time.hours + ":" + time.minutes + ":" + time.seconds);
+            time.seconds = date.getSeconds();
+            time.minutes = date.getMinutes();
+            time.hours = date.getHours();
+        }
+        time_minus_1s (time)
+
+        //4
+        let x = -500;
+        function time_changed (time, x) {
+            time.seconds += x;
+            while (time.seconds > 60){          //     
+                time.minutes += 1;              //
+                time.seconds -= 60;             //
+            }                                   //  якщо х велике додатнє число
+            while (time.minutes > 60){          //
+                time.hours += 1;                //
+                time.minutes -= 60;             //
+            }                                   //
+            while (time.seconds < 0){               //                                 
+                time.minutes -= 1;                  //                                 
+                time.seconds += 60;                 //                               
+            }                                       //      якщо х велике від'ємне число
+            while (time.minutes < 0){               //                              
+                time.hours -= 1;                    //                         
+                time.minutes += 60;                 //                            
+            }                                       //      
+            if (time.seconds == 60) {
+                time.seconds = 0;
+                time.minutes += 1;
+            }
+            if (time.minutes == 60) {
+                time.minutes = 0;
+                time.hours += 1;
+            }
+            if (time.hours == 24) time.hours = 0;
+
+            if (time.seconds == -1) {
+                time.seconds = 59;
+                time.minutes -= 1;
+            }
+            if (time.minutes == -1) {
+                time.minutes = 59;
+                time.hours -= 1;
+            }
+            if (time.hours == -1) time.hours = 23;
+            console.log("Поточний час + x c: " + time.hours + ":" + time.minutes + ":" + time.seconds);
+            time.seconds = date.getSeconds();
+            time.minutes = date.getMinutes();
+            time.hours = date.getHours();
+        }
+        time_changed (time, x)
+    </script>
+</body>
+</html>

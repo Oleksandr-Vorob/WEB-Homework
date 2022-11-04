@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let line = "кит на морі романтик";
+
+        //1
+        function space (line){
+            let k = 0;
+           for (const iterator of line) {
+           if (iterator == " ") k++;
+           }
+           console.log("Рядок має " + k + " пробілів.");
+        }
+        space (line);
+
+        //2
+        function up (line){
+            let x = line[0].toUpperCase();
+             line = x + line.slice(1, line.length);
+            console.log(line);
+        }
+        up (line);
+
+        //3
+        function words (line){
+            let q = 1;
+           for (const iterator of line) {
+           if (iterator == " ") q++;
+           }
+           console.log("Рядок має " + q + " слів.");
+        }
+        words (line);
+
+        //4
+        function palindrom (line){
+            line = line.replace(/ /g,'');
+            let a = 0;
+            for (i=0; i < Math.ceil(line.length/2); i++){
+                if (line[i] == line[line.length-i-1]) a++;
+            }
+            if (Math.ceil(line.length/2) == a) console.log("Рядок - паліндром.")
+            else console.log("Рядок - не паліндром.")
+        }
+        palindrom (line);
+    </script>
+</body>
+</html>

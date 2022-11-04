@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [Math.ceil(Math.random()*100), Math.ceil(Math.random()*100), Math.ceil(Math.random()*100), Math.ceil(Math.random()*100), 
+        Math.ceil(Math.random()*100), Math.ceil(Math.random()*100), Math.ceil(Math.random()*100), Math.ceil(Math.random()*100), Math.ceil(Math.random()*100), 
+        Math.ceil(Math.random()*100)];
+
+         //1
+         function showarr (arr){
+            console.log(arr);
+         };
+         showarr(arr);
+
+         //2
+         function pair_el (arr) {
+            for (let i = 0; i<10; i++){
+                if (arr[i] % 2 == 0) console.log(arr[i]);
+            } 
+         };
+         pair_el (arr);
+
+         //3
+         function multiple_7 (arr){
+            for (let i = 0; i<10; i++){
+                if (arr[i] % 7 == 0) {
+                    console.log("У масиві є число кратне 7");
+                    break;
+            } 
+         }
+        };
+        multiple_7 (arr);
+
+        //4
+        function sort (arr){
+            arr.sort();
+            console.log(arr);
+        }
+        sort (arr);
+
+        //5
+        function zero (arr) {
+            for (let i = 0; i<10; i++){
+                if (i >= 5) arr[i] = 0;
+            } 
+            console.log(arr);
+         };
+         zero (arr);
+
+         //6
+         function same (arr) {
+            for (let i = 0; i<10; i++){
+                for (let k = 1; k<10; k++){
+                    if (i != k && arr[i] == arr[k]) {
+                        console.log ("Масив має однакові елементи");
+                        break;
+                    }
+                }
+            }
+         }
+         same (arr);
+
+         //7
+         function delet (arr, x){
+             arr.splice(x, 1);
+             console.log(arr);
+        };
+        let x = 4
+        delet (arr, x);
+    </script>
+</body>
+</html>
