@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body h1{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            margin-top: 10px;
+            border-collapse: collapse;
+        }
+        table td {
+            border: 2px solid rgb(63, 63, 136);
+            padding: 10px;
+        }
+        table tr.hide {
+            display: none;
+        }
+        table tr.header {
+            display: contents;
+        }
+        .polya input {
+            margin: 5px;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <h1>Table of cars</h1>
+    <div class="polya">
+        <span>Car brand:</span>
+    <input id = 'brand' type="text"> 
+    <span>Power:</span>
+    <input id = 'power' type="text"> 
+    <span>Graduation year:</span>
+    <input id = 'year' type="text"> 
+    </div>
+    
+    <button id = 'add-car'>Add car</button>
+    <button id = 'clear-btn'>Clear</button>
+    <div style="margin-top: 10px;">Search</div>
+    <input id = 'table1' type="text"> 
+    <table id = 'table'>
+    <tr class="header">
+        <td>CAR BRAND</td>
+        <td>POWER</td>
+        <td>GRADUATION YEAR</td>
+    </tr>
+    
+</table>
+    
+    
+    <script>
+        const add = document.getElementById('add-car');
+        const table = document.getElementById('table');
+        const clearBtn = document.getElementById('clear-btn');
+        const brand = document.getElementById('brand');
+        const power = document.getElementById('power');
+        const year = document.getElementById('year');
+        function addItem(text1, text2, text3) {
+    table.innerHTML += `<tr><td>${text1}</td><td>${text2}</td><td>${text3}</td></tr>`
+}
+        clearBtn.onclick = () => {
+    table.innerHTML = "<tr class='header'><td>CAR BRAND</td><td>POWER</td><td>GRADUATION YEAR</td></tr>";
+     };
+      add.onclick = () => {
+        if (brand.value != "" && power.value != "" && year.value != "") {
+            const text1 = brand.value;
+            const text2 = power.value;
+            const text3 = year.value;
+        addItem(text1, text2, text3);
+        };
+     };
+
+     
+        document.querySelector('#table1').oninput = function () {
+        let val = this.value.trim().toLowerCase();
+        let tableItem = document.querySelectorAll('table tr');
+        if (val != '') {
+            tableItem.forEach(function(elem) {
+                if (elem.innerText.toLowerCase().search(val) == -1) {
+                    elem.classList.add('hide');
+                }
+                else {
+                    elem.classList.remove('hide');
+                }
+            } );
+        }
+        else tableItem.forEach(function(elem) {
+            elem.classList.remove('hide');
+        });
+     }
+     
+    </script>
+    
+</body>
+</html>
