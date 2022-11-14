@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 3</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin: auto;
+            background-color:rgb(158, 207, 207);
+            border-radius: 10px;
+            background-image: url(./moon.png);
+            background-repeat: no-repeat;
+            background-size: 35%;
+            background-position: bottom right;
+        }
+        h4 {
+            margin: 5%;
+            background-color: rgb(211, 82, 35);
+            padding: 2%;
+            color: white;
+            padding-left: 10%;
+            margin-left: -3%;
+            margin-right: 25%;
+        }
+        input {
+            width: 50%;
+            margin: 2%;
+            padding: 2%;
+            background-color: rgb(159, 217, 219);
+            border: none;
+            border-bottom: 1px solid black;
+        }
+        label {
+            margin-left: 5%;
+            color: rgb(73, 72, 72);
+        }
+        #ex {
+            display: grid;
+            grid-template-columns: 40% 40% ;
+            margin-left: 3%;
+            margin-bottom: 8%;
+        }
+        .line input{
+            width: 40%;
+        }
+        input[type="password"] {
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <h4>CREDIT CARD DETAILS</h4>
+            <label>
+                Card Number <br>
+            <input type="text" placeholder="1234 5678 9012 3456">
+            </label> 
+            <label>
+                Name On Card  <br>
+                <input type="text" placeholder="Name Surname">
+            </label>
+        <span id="ex"><label style="margin-left: 5%;">
+            Expiry Date <br>
+              <span class="line"><input type="number" min="1" max="12" placeholder="02"> 
+                <input type="number" min="2017" placeholder="2017"> </span>
+           </label> 
+           <label>
+            CVV/CVN <br>
+            <input type="password" placeholder="***">
+       
+            </label></span> 
+           
+    </form>
+</body>
+</html>

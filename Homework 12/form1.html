@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 1</title>
+    <style>
+        body {
+            background-color: tomato;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 3%;
+        }
+
+        form {
+            text-align: center;
+            background-color: antiquewhite;
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            margin: auto;
+        }
+
+        input {
+            text-align: center;
+            width: 80%;
+            margin: auto;
+            margin-top: 5%;
+            padding: 2%;
+        }
+
+        form button {
+            width: 85%;
+            color: white;
+            background-color: green;
+            border: none;
+            border-bottom: 5px solid darkgreen;
+            margin: auto;
+            margin-top: 5%;
+            padding: 3%;
+        }
+
+        a {
+            margin-top: 3%;
+            padding: 4%;
+            text-decoration: none;
+            color: tomato;
+            font-weight: bold;
+        }
+
+        div {
+            margin: 3%;
+            color: white;
+        }
+
+        .butt button {
+            padding: 1.5%;
+            color: white;
+            border: none;
+            width: 20vw;
+            margin: 1vw;
+        }
+        button img {
+            height: 3vw;
+            margin-bottom: -1vw;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <h1>Member Login</h1>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <button type="submit"> Login</button>
+        <a href="google.com">Forgot password?</a>
+    </form>
+    <div>... or log in with:</div>
+    <span class="butt">
+        <button style="background-color: rgb(44, 44, 199);"><img
+                src="http://s1.iconbird.com/ico/2013/9/443/w256h2561380223328facebook.png" alt="f"> Facebook</button>
+        <button style="background-color: rgb(36, 159, 201);"><img
+                src="https://play-lh.googleusercontent.com/yQ0oBTVi7VttofA73DSrcf9zrBsnktxxxn6ZaAoSVV8GNFlJKh2Z-A0CT5XgOKWwE_fs"
+                alt="T"> Twitter</button>
+    </span>
+</body>
+
+</html>

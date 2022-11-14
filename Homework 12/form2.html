@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 2</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(https://abrakadabra.fun/uploads/posts/2022-03/1646652007_2-abrakadabra-fun-p-oboi-dlya-aifon-standartnie-s-morem-3.jpg);
+            color: white;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            -moz-box-shadow:0 0 10px #000;
+            -webkit-box-shadow:0 0 10px #000;
+            box-shadow:0 0 10px #000;
+            margin: 5%;
+        }
+       label {
+        margin: 1%;
+        margin-left: 3%;
+        display: grid;
+        gap: 1%;
+       }
+       input, select {
+        padding: 1%;
+       }
+       #lable1 {
+        grid-template-columns: 20% 35% 35%;
+       }
+       #lable2, #lable4, #lable5 {
+        grid-template-columns: 20% 71%;
+       }
+       #lable3 {
+        grid-template-columns: 20% 23% 23% 23%;
+       }
+        button[type="submit"] {
+            color: white;
+            border: 1px solid white;
+            background: rgba(255, 255, 255, 0);
+            margin: 3%;
+            padding: 1%;
+        }
+        .sumbit {
+            display: grid;
+            gap: 1%;
+            grid-template-columns: 20% 73%;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <h2 style="margin: 3%;">Contact form</h2>
+        <p style="margin-left: 3%;">Please fill in your information and we'll be sending your order.</p>
+        <label id="lable1">
+            Your name <input type="text" placeholder="first name"> 
+            <input type="text" placeholder="last name">
+        </label>
+        <label id="lable2">
+        Your email <input type= "email" placeholder="your_mail@mail.com">
+    </label>
+    <label id="lable3">
+        Phone * <input type="tel" placeholder="000"> <input type="tel" placeholder="000"> <input type="tel" placeholder="000">
+    </label>
+    <label id="lable4">
+        Message subgect * <select>
+            <option>Other</option>
+        </select>
+    </label>
+    <label id="lable5">
+        Message * <textarea rows="5"></textarea>
+    </label>
+    <div style="border-bottom: 1px solid white; width: 90%; margin: auto;"></div>
+    <span class="sumbit"><div></div><button type="submit">SUMBIT FORM</button></span>
+    </form>
+</body>
+</html>
