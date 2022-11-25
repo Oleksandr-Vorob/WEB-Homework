@@ -36,25 +36,25 @@
         <span>Car brand:</span>
     <input id = 'brand' type="text"> 
     <span>Power:</span>
-    <input id = 'power' type="text"> 
+    <input id = 'power' type="number"> 
     <span>Graduation year:</span>
-    <input id = 'year' type="text"> 
+    <input id = 'year' type="number" min="1950"> 
     </div>
     
     <button id = 'add-car'>Add car</button>
     <button id = 'clear-btn'>Clear</button>
     <div style="margin-top: 10px;">Search</div>
-    <input id = 'table1' type="text"> 
-    <table id = 'table'>
-    <tr class="header">
+    <input id = 'table1' type="search"> 
+    <table >
+        <thead><tr class="header">
         <td>CAR BRAND</td>
         <td>POWER</td>
         <td>GRADUATION YEAR</td>
-    </tr>
+    </tr></thead>
+    <tbody id = 'table'>
+    </tbody>
     
 </table>
-    
-    
     <script>
         const add = document.getElementById('add-car');
         const table = document.getElementById('table');
@@ -66,7 +66,7 @@
     table.innerHTML += `<tr><td>${text1}</td><td>${text2}</td><td>${text3}</td></tr>`
 }
         clearBtn.onclick = () => {
-    table.innerHTML = "<tr class='header'><td>CAR BRAND</td><td>POWER</td><td>GRADUATION YEAR</td></tr>";
+    table.innerHTML = "";
      };
       add.onclick = () => {
         if (brand.value != "" && power.value != "" && year.value != "") {
