@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список справ</title>
+    <link rel="stylesheet" href="./design.css">
+</head>
+<body>
+    <header><h1>Список справ <img class="img0" src="https://cdn-icons-png.flaticon.com/512/2645/2645891.png" alt="list"></h1></header>
+    <img class="img1" src="https://www.pngplay.com/wp-content/uploads/7/Checklist-Transparent-Background.png" alt="list">
+    <img class="img2" src="https://st3.depositphotos.com/6831718/13285/v/600/depositphotos_132859278-stock-illustration-set-of-16-project-management.jpg" alt="img">
+    <form class="container">
+        <h3>Додати справу</h3>
+    <div>
+        <label for="name-input">Назва</label>
+        <div class="input">
+            <input type="text" id="name-input" placeholder="Введіть назву">
+            <span class="bottom"></span>
+            <span class="right"></span>
+            <span class="top"></span>
+            <span class="left"></span>
+        </div>
+    </div>
+     <div>
+        <label for="date-input">Термін виконання</label>
+        <div class="input">
+            <input type="date" id="date-input">
+            <span class="bottom"></span>
+            <span class="right"></span>
+            <span class="top"></span>
+            <span class="left"></span>
+        </div>
+    </div>
+    <div>
+        <label for="prior-input">Пріоритет</label>
+        <div class="input">
+            <input type="number" min="1" id="prior-input" placeholder="Визначте пріоритет">
+            <span class="bottom"></span>
+            <span class="right"></span>
+            <span class="top"></span>
+            <span class="left"></span>
+        </div>
+    </div>
+    <div>
+        <label for="tag-input">Теги</label>
+        <div class="input">
+            <input type="text" id="tag-input" placeholder="Введіть теги">
+            <span class="bottom"></span>
+            <span class="right"></span>
+            <span class="top"></span>
+            <span class="left"></span>
+        </div>
+    </div>
+    <div>
+        <label for="discr-input">Опис</label>
+        <div class="input">
+            <textarea rows="3" id="discr-input" placeholder="Додайте опис"></textarea>
+            <span class="bottom"></span>
+            <span class="right"></span>
+            <span class="top"></span>
+            <span class="left"></span>
+        </div>
+    </div>
+    <button id="addTask" type="button">Додати</button>
+</form>
+<div class="search">Пошук справ:<input id = 'table1' type="search" placeholder="Введіть назву шуканої справи"></div>
+<button id="sortBtn" type="button">Сортувати список</button>
+<button id="clearBtn1" type="button">Очистити список</button>
+<table>
+    <thead>
+        <tr class="table-head">
+            <th scope="col" style="font-size: 12px; width: 5%;">Виконано/Невиконано</th>
+            <th scope="col">Назва</th>
+            <th scope="col">Термін виконання</th>
+            <th scope="col">Пріоритет</th>
+            <th scope="col">Теги</th>
+            <th scope="col">Опис</th>
+            <th scope="col" colspan="2">Дії</th>
+        </tr>
+    </thead>
+    <tbody id="table-body">
+    </tbody>
+</table>
+<script src="./main.js"></script>
+</body>
+</html>
